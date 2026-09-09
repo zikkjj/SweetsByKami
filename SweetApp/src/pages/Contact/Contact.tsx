@@ -50,13 +50,6 @@ export function Contact() {
             <div className="contact-info-card">
                 <h3>Nosso Ateliê</h3>
 
-                <div className="contact-info-item">
-                    <span className="contact-info-item__icon">📍</span>
-                    <div>
-                        <strong>Localização</strong>
-                        <p>Alameda dos Doces, 150 - Jardins, São Paulo/SP</p>
-                    </div>
-                </div>
 
                 <div className="contact-info-item">
                     <span className="contact-info-item__icon">🕒</span>

@@ -2,7 +2,6 @@ import { useState } from 'react';
 
 import { Header } from '../../components/layout/Header/Header';
 import { BottomNavigation } from '../../components/layout/BottomNavigation/BottomNavigation';
-import { FeaturedProduct } from '../../components/product/FeaturedProduct/FeaturedProduct';
 import { ProductCard } from '../../components/product/ProductCard/ProductCard';
 import { CartDrawer } from '../../components/cart/CartDrawer/CartDrawer';
 import { ProductDetailModal } from '../../components/product/ProductDetailModal/ProductDetailModal';
@@ -15,6 +14,7 @@ import { products } from '../../data/products';
 import { useCart } from '../../context/useCart';
 
 import './Menu.css';
+import { FeaturedProduct } from '../../components/product/FeaturedProduct/FeaturedProduct';
 
 const categories = [
     'Todos',
