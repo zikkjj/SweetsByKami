@@ -1,0 +1,185 @@
+.orders-page {
+    padding: 10px 18px 90px;
+    animation: fadeIn 0.2s ease;
+}
+
+.orders-page__header {
+    margin-bottom: 18px;
+}
+
+.orders-page__header h2 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #2b2226;
+    margin: 0 0 2px;
+}
+
+.orders-page__header p {
+    font-size: 11px;
+    color: #8c717c;
+    margin: 0;
+}
+
+.orders-list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.order-card {
+    background: #ffffff;
+    border-radius: 20px;
+    border: 1px solid #f6e6ec;
+    box-shadow: 0 4px 16px rgba(175, 120, 140, 0.08);
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.order-card__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #faedf2;
+}
+
+.order-card__id {
+    font-size: 13px;
+    font-weight: 700;
+    color: #2b2226;
+    display: block;
+}
+
+.order-card__date {
+    font-size: 10px;
+    color: #9f8892;
+}
+
+.order-status {
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.order-status--preparing {
+    background: #fff3e0;
+    color: #e65100;
+}
+
+.order-status--delivering {
+    background: #e3f2fd;
+    color: #1565c0;
+}
+
+.order-status--delivered {
+    background: #e8f5e9;
+    color: #2e7d32;
+}
+
+.order-card__items {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.order-card__item-row {
+    display: flex;
+    align-items: center;
+    font-size: 11px;
+    color: #4a3b42;
+}
+
+.order-card__item-qty {
+    font-weight: 700;
+    color: #e65b91;
+    width: 24px;
+}
+
+.order-card__item-name {
+    flex: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.order-card__item-price {
+    font-weight: 600;
+    color: #2b2226;
+}
+
+.order-card__footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 10px;
+    border-top: 1px dashed #fae8ef;
+}
+
+.order-card__total-wrap span {
+    font-size: 10px;
+    color: #8c717c;
+    display: block;
+}
+
+.order-card__total-wrap strong {
+    font-size: 14px;
+    font-weight: 800;
+    color: #2b2226;
+}
+
+.order-card__repeat-btn {
+    padding: 8px 14px;
+    border-radius: 16px;
+    border: 1px solid #e65b91;
+    background: #fff5f8;
+    color: #e65b91;
+    font-size: 11px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.15s ease;
+}
+
+.order-card__repeat-btn:hover {
+    background: #e65b91;
+    color: #ffffff;
+}
+
+/* VAZIO */
+.orders-empty {
+    text-align: center;
+    padding: 60px 20px;
+    background: #ffffff;
+    border-radius: 20px;
+    border: 1px dashed #f4dae3;
+}
+
+.orders-empty__icon {
+    font-size: 40px;
+    margin-bottom: 8px;
+}
+
+.orders-empty h3 {
+    font-size: 16px;
+    color: #2b2226;
+    margin-bottom: 4px;
+}
+
+.orders-empty p {
+    font-size: 12px;
+    color: #8c717c;
+    margin-bottom: 16px;
+}
+
+.orders-empty__btn {
+    padding: 10px 22px;
+    border-radius: 20px;
+    background: #e65b91;
+    color: #ffffff;
+    border: none;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+}

@@ -1,46 +1,45 @@
-import type { Product } from '../../../type/product';
-import './ProductCard.css';
+import './Header.css';
 
-interface ProductCardProps {
-    product: Product;
-    onAdd: (product: Product) => void;
+interface HeaderProps {
+    cartCount?: number;
+    onCartClick?: () => void;
 }
 
-export function ProductCard({
-    product,
-    onAdd,
-}: ProductCardProps) {
+export function Header({ cartCount = 0, onCartClick }: HeaderProps) {
     return (
-        <article className="product-card">
-            <div className="product-card__image-container">
-                <img
-                    src={product.image}
-                    alt={product.name}
-                    className="product-card__image"
-                />
-            </div>
-
-            <div className="product-card__content">
-                <h3>{product.name}</h3>
-
-                <span className="product-card__rating">
-                    ★ {product.rating}
+        <header className="header">
+            <div className="header__brand-wrapper">
+                <span className="header__welcome">
+                    BEM-VINDA <span className="header__bow">🎀</span>
                 </span>
-
-                <div className="product-card__footer">
-                    <strong>
-                        R$ {product.price.toFixed(2).replace('.', ',')}
-                    </strong>
-
-                    <button
-                        type="button"
-                        onClick={() => onAdd(product)}
-                        className="product-card__add"
-                    >
-                        +
-                    </button>
-                </div>
+                <h1 className="header__brand">La Douceur</h1>
             </div>
-        </article>
+
+            <button
+                type="button"
+                className="header__cart"
+                onClick={onCartClick}
+                aria-label="Sacola de compras"
+            >
+                <svg
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                >
+                    <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z" />
+                    <line x1="3" y1="6" x2="21" y2="6" />
+                    <path d="M16 10a4 4 0 0 1-8 0" />
+                </svg>
+
+                {cartCount > 0 && (
+                    <span className="header__cart-badge">{cartCount}</span>
+                )}
+            </button>
+        </header>
     );
 }
